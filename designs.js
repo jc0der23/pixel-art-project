@@ -3,15 +3,15 @@
 
 // When size is submitted by the user, call makeGrid()
 
-const colorPicker =  document.querySelector('#colorPicker');
-const sizePicker = document.querySelector('#sizePicker');
-const table = document.querySelector('#pixelCanvas');
+const colorPicker =  document.getElementById('#colorPicker');
+const sizePicker = document.getElementById('#sizePicker');
+const table = document.getElementById('#pixelCanvas');
 
 sizePicker.addEventListener('submit', (event) => {
     event.preventDefault();
 
-const width = document.querySelector('#inputWidth').value;
-const height = document.querySelector('#inputHeight').value;
+const width = document.getElementById('#inputWidth').value;
+const height = document.getElementById('#inputHeight').value;
 
 makeGrid(width, height);
 });
@@ -27,11 +27,16 @@ function makeGrid(width, height) {
           let newCell = newRow.insertCell();
   
           newCell.onclick = changeColor;
+          newCell.ondblclick = clearColor;
           
         }
     }
 }
 
 function changeColor() {
-    this.style.background = $colorPicker.value;
+    this.style.background = colorPicker.value;
+  }
+
+  function clearColor() {
+    this.style.background = '#fff';
   }
