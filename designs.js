@@ -7,8 +7,8 @@ const colorPicker =  document.getElementById('#colorPicker');
 const sizePicker = document.getElementById('#sizePicker');
 const table = document.getElementById('#pixelCanvas');
 
-sizePicker.addEventListener('submit', (Event) => {
-    Event.preventDefault();
+sizePicker.addEventListener('submit', (event) => {
+    event.preventDefault();
 
 const width = document.getElementById('#inputWidth').value;
 const height = document.getElementById('#inputHeight').value;
