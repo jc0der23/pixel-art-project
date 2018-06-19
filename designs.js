@@ -13,10 +13,10 @@ sizePicker.addEventListener('submit', (event) => {
 const width = document.querySelector('#inputWidth').value;
 const height = document.querySelector('#inputHeight').value;
 
-makeGrid(width, height);
+makeGrid(height, width);
 });
 
-function makeGrid(width, height) {
+function makeGrid(height, width) {
     table.innerHTML = '';
 
     for (let row = 0; row < width; row++) {
