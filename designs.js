@@ -7,14 +7,18 @@ const colorPicker =  document.getElementById('#colorPicker');
 const sizePicker = document.getElementById('#sizePicker');
 const table = document.getElementById('#pixelCanvas');
 
-sizePicker.addEventListener('submit', (event) => {
-    event.preventDefault();
+window.onload=function(){
+    sizePicker.addEventListener('submit', (event) => {
+        event.preventDefault();
+    
+    const width = document.getElementById('#inputWidth').value;
+    const height = document.getElementById('#inputHeight').value;
+    
+    makeGrid(width, height);
+    });
+  }
 
-const width = document.getElementById('#inputWidth').value;
-const height = document.getElementById('#inputHeight').value;
 
-makeGrid(width, height);
-});
 
 function makeGrid(width, height) {
     table.innerHTML = '';
