@@ -3,15 +3,15 @@
 
 // When size is submitted by the user, call makeGrid()
 
-const colorPicker =  document.getElementById('#colorPicker');
-const sizePicker = document.getElementById('#sizePicker');
-const table = document.getElementById('#pixelCanvas');
+const colorPicker =  document.querySelector('#colorPicker');
+const sizePicker = document.querySelector('#sizePicker');
+const table = document.querySelector('#pixelCanvas');
 
 sizePicker.addEventListener('submit', (event) => {
     event.preventDefault();
 
-const width = document.getElementById('#inputWidth').value;
-const height = document.getElementById('#inputHeight').value;
+const width = document.querySelector('#inputWidth').value;
+const height = document.querySelector('#inputHeight').value;
 
 makeGrid(width, height);
 });
