@@ -16,7 +16,7 @@ const height = document.querySelector('#inputHeight').value;
 makeGrid(height, width);
 });
 
-function makeGrid(height, w) {
+function makeGrid(height, width) {
     table.innerHTML = '';
 
     for (let cell = 0; cell < width; cell++) {
