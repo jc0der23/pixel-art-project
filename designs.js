@@ -7,18 +7,14 @@ const colorPicker =  document.getElementById('#colorPicker');
 const sizePicker = document.getElementById('#sizePicker');
 const table = document.getElementById('#pixelCanvas');
 
-window.onload=function(){
-    sizePicker.addEventListener('submit', (event) => {
-        event.preventDefault();
-    
-    const width = document.getElementById('#inputWidth').value;
-    const height = document.getElementById('#inputHeight').value;
-    
-    makeGrid(width, height);
-    });
-  }
+sizePicker.addEventListener('submit', (event) => {
+    event.preventDefault();
 
+const width = document.getElementById('#inputWidth').value;
+const height = document.getElementById('#inputHeight').value;
 
+makeGrid(width, height);
+});
 
 function makeGrid(width, height) {
     table.innerHTML = '';
@@ -37,5 +33,5 @@ function makeGrid(width, height) {
 }
 
 function changeColor() {
-    this.style.background = colorPicker.value;
+    this.style.background = $colorPicker.value;
   }
