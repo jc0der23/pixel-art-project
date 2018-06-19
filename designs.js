@@ -20,7 +20,7 @@ function makeGrid(width, height) {
     table.innerHTML = '';
 
     for (let row = 0; row < width; row++) {
-        let newRow = $table.insertRow();
+        let newRow = table.insertRow();
   
         for (let cell = 0; cell < height; cell++) {
 
@@ -33,5 +33,5 @@ function makeGrid(width, height) {
 }
 
 function changeColor() {
-    this.style.background = $colorPicker.value;
+    this.style.background = colorPicker.value;
   }
