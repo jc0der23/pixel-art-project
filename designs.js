@@ -16,15 +16,15 @@ const height = document.querySelector('#inputHeight').value;
 makeGrid(height, width);
 });
 
-function makeGrid(height, width) {
+function makeGrid(height, w) {
     table.innerHTML = '';
 
-    for (let row = 0; row < width; row++) {
-        let newRow = table.insertRow();
+    for (let cell = 0; cell < width; cell++) {
+        let newCell = table.insertCell();
   
-        for (let cell = 0; cell < height; cell++) {
+        for (let row = 0; row < height; row++) {
 
-          let newCell = newRow.insertCell();
+          let newRow = newCell.insertRow();
   
           newCell.onclick = changeColor;
           newCell.ondblclick = clearColor;
